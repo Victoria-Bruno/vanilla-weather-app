@@ -29,6 +29,30 @@ function displayWeatherCondition(response) {
   );
   document.querySelector("#weather-description").innerHTML =
     response.data.weather[0].main;
+  if (response.data.weather[0].main == "Clouds") {
+    document
+      .querySelector("#icon-weather")
+      .setAttribute("src", "media/cloud-pixilart.png");
+  } else if (response.data.weather[0].main == "Clear") {
+    document
+      .querySelector("#icon-weather")
+      .setAttribute("src", "media/sunny.png");
+  } else if (response.data.weather[0].main == "Rain") {
+    document
+      .querySelector("#icon-weather")
+      .setAttribute("src", "media/rainy.png");
+  } else if (response.data.weather[0].main == "Snow") {
+    document
+      .querySelector("#icon-weather")
+      .setAttribute("src", "media/snowy.png");
+  } else if (
+    (response.data.weather[0].main == "Clouds") &
+    (response.data.weather[0].description == "few clouds")
+  ) {
+    document
+      .querySelector("#icon-weather")
+      .setAttribute("src", "media/sunandclouds.png");
+  }
 }
 
 // city input
