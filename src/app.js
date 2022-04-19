@@ -53,6 +53,7 @@ function displayWeatherCondition(response) {
       .querySelector("#icon-weather")
       .setAttribute("src", "media/sunandclouds.png");
   }
+  celsiusTemperature = response.data.main.temp;
 }
 
 // city input
@@ -85,3 +86,25 @@ function getCurrentLocation(event) {
 
 // let currentLocationButton = document.querySelector("#current-location-button");
 // currentLocationButton.addEventListener("click", getCurrentLocation);
+
+//Unit conversion
+function displayFarhenheitTemperature(event) {
+  event.preventDefault();
+  let farhenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(farhenheitTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
+let farhenheitLink = document.querySelector("#farhenheit-link");
+farhenheitLink.addEventListener("click", displayFarhenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
