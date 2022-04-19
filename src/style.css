@@ -1,28 +1,115 @@
-.weather-app {
-  display: block;
-  margin-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #f0ece3;
-  color: #c7b198;
-  font-family: "Zilla Slab", serif;
-  border-radius: 10px;
-  width: 400px;
+body {
+  background: #d7e9f7;
+  font-family: "Prata", serif;
 }
 
-h1,
-h2 {
-  padding-left: 10px;
-  padding-top: 10px;
+p {
+  text-align: center;
 }
 
-ul {
-  list-style-type: none;
-  padding-top: 70px;
-  padding-left: 0px;
+.card-city {
+  background: #ffd6e0;
+  font-family: "Prata", serif;
+  color: #ff3366;
+  font-weight: 900;
+  height: 100%;
+}
+
+.card-search {
+  background: #6e50c952;
+  color: #746de0;
+  font-size: 27.5px;
+  font-weight: bolder;
+}
+
+.card {
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+.city-name {
+  font-size: 35px;
+  font-weight: bolder;
+  font-family: "Prata", serif;
+  line-height: 1;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.card-days {
+  background: #fee2b3;
+  font-family: "Prata", serif;
+  color: #ff7043;
+  font-size: 27px;
+  font-weight: 900;
+  text-align: center;
+  height: 100%;
+}
+
+i {
+  font-size: 30px;
+}
+
+header {
+  margin-top: 20px;
+  border: #ff3366;
+  border-width: 4px;
+  border-radius: 20px;
+  font-family: "Prata", serif;
+  font-weight: bold;
+}
+
+#timer {
+  margin-bottom: 0;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 img {
-  max-height: 100%;
-  max-width: 100%;
+  width: 20%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.additional-information {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.temperature {
+  font-size: 40px;
+}
+
+.units {
+  font-size: 20px;
+  position: relative;
+  top: -55px;
+  left: 55px;
+}
+
+a {
+  color: #ff3366;
+}
+
+.weather-message {
+  text-align: center;
+  font-size: 30px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.btn-outline-info {
+  color: #746de0;
+  border: none;
+  transition: all 200ms ease-in-out;
+}
+
+.btn-outline-info:hover {
+  color: #000;
+  background-color: #0dcaf0;
+  border-color: #0dcaf0;
 }
