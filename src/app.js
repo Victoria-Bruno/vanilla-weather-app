@@ -16,6 +16,21 @@ let minutes = now.getMinutes();
 let currentTime = document.querySelector("#timer");
 currentTime.innerHTML = `${day} ${hours}:${minutes}`;
 
+//Forecast
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="card-body">`;
+  let days = ["thursday", "friday", "saturday", "sunday", "monday"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="forecast-date">${day}</div>
+              <i class="fas fa-sun"></i>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 // Link input city to actual weather (API)
 function displayWeatherCondition(response) {
   document.querySelector("#cityName").innerHTML = response.data.name;
@@ -108,3 +123,5 @@ farhenheitLink.addEventListener("click", displayFarhenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+displayForecast();

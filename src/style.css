@@ -36,11 +36,11 @@ p {
   text-transform: uppercase;
 }
 
-.card-days {
+.card-forecast {
   background: #fee2b3;
   font-family: "Prata", serif;
   color: #ff7043;
-  font-size: 27px;
+  font-size: 24px;
   font-weight: 900;
   text-align: center;
   height: 100%;
