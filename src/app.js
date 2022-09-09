@@ -31,6 +31,13 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "559d4e8adbce809e1299cc093a978168";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  // Continue HERE - min 4:49
+}
+
 // Link input city to actual weather (API)
 function displayWeatherCondition(response) {
   document.querySelector("#cityName").innerHTML = response.data.name;
@@ -69,6 +76,7 @@ function displayWeatherCondition(response) {
       .setAttribute("src", "media/sunandclouds.png");
   }
   celsiusTemperature = response.data.main.temp;
+  getForecast(response.data.coord);
 }
 
 // city input
@@ -85,6 +93,8 @@ function handleSubmit(event) {
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
+
+//Get coordinates for the API forecast
 
 // coordinates
 function searchLocation(position) {
