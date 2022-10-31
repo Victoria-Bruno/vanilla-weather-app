@@ -36,7 +36,7 @@ p {
   text-transform: uppercase;
 }
 
-.card-forecast {
+/* .card-forecast {
   background: #fee2b3;
   font-family: "Prata", serif;
   color: #ff7043;
@@ -44,7 +44,7 @@ p {
   font-weight: 900;
   text-align: center;
   height: 100%;
-}
+} */
 
 i {
   font-size: 30px;

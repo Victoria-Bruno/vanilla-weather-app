@@ -54,26 +54,26 @@ function displayWeatherCondition(response) {
   if (response.data.weather[0].main == "Clouds") {
     document
       .querySelector("#icon-weather")
-      .setAttribute("src", "media/cloud-pixilart.png");
+      .setAttribute("src", "media/cloudy.svg");
   } else if (response.data.weather[0].main == "Clear") {
     document
       .querySelector("#icon-weather")
-      .setAttribute("src", "media/sunny.png");
+      .setAttribute("src", "media/sunny.svg");
   } else if (response.data.weather[0].main == "Rain") {
     document
       .querySelector("#icon-weather")
-      .setAttribute("src", "media/rainy.png");
+      .setAttribute("src", "media/rainy.svg");
   } else if (response.data.weather[0].main == "Snow") {
     document
       .querySelector("#icon-weather")
-      .setAttribute("src", "media/snowy.png");
+      .setAttribute("src", "media/snowy.svg");
   } else if (
     (response.data.weather[0].main == "Clouds") &
     (response.data.weather[0].description == "few clouds")
   ) {
     document
       .querySelector("#icon-weather")
-      .setAttribute("src", "media/sunandclouds.png");
+      .setAttribute("src", "media/sunandclouds.svg");
   }
   celsiusTemperature = response.data.main.temp;
   getForecast(response.data.coord);
